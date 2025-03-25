@@ -34,22 +34,6 @@
       }
     },
     {
-      "label": "PreLaunchTask for Run COROSZLAN_22_STUDENTH22",
-      "type": "process",
-      "command": "npx",
-      "args": [
-        "dev-cap-tools",
-        "gen-entrypoint"
-      ],
-      "dependsOn": [
-        "BuildMDK",
-        "DeployToHANADB:.env1"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}"
-      }
-    },
-    {
       "label": "npm-install",
       "type": "process",
       "command": "npm",
@@ -107,6 +91,22 @@
       ],
       "dependsOn": [
         "BuildMDK"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "PreLaunchTask for Run COROSZLAN_22_STUDENTH22",
+      "type": "process",
+      "command": "npx",
+      "args": [
+        "dev-cap-tools",
+        "gen-entrypoint"
+      ],
+      "dependsOn": [
+        "BuildMDK",
+        "DeployToHANADB:.env1"
       ],
       "options": {
         "cwd": "${workspaceFolder}"
